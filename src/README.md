@@ -9,9 +9,9 @@
 </ul>
 
 <h1> Setup </h1>
+<br><em>Purpose: To teach you how to clone a github repository onto your computer and tools needed for all future projects</em><br>
 <h3>Intall the npm packages we have on this repository/project</h3>
 <p><strong>Skip if you know how to use node,npm, and git, else continue following the steps</strong></p>
-<em>Purpose: To teach you how to clone a github repository onto your computer and tools needed for all future projects</em>
 <p>1. Check if you have npm&node on your computer by running npm -v and also node -v <a href="https://www.theodinproject.com/lessons/foundations-installing-node-js">Guide to installation</a></p>
 <p>2. Make sure you have git installed <a href="https://www.theodinproject.com/lessons/foundations-setting-up-git">Follow this tutorial if you don't it installed</a></p>
 <p>3. Clone this project <a href="https://www.theodinproject.com/lessons/foundations-git-basics">How to clone a github repo (intro to git)</a><p>
@@ -41,6 +41,10 @@
 (capitalization matters so make sure you're typing in things correctly. You can always tab before you finish a word. Example: cd csci11[tab] and "33" would automatically be filled in)
 
 <footer>
-<em>Please reach out if you need help, else you're welcome to used what you just learn to contribute to this repository if you see any grammatical/information errors.</em>
+<em>Please reach out if you need help, else you're welcome to used what you just learn to contribute to this repository if you see any grammatical/information errors. </em>
 </footer>
+
+<h3>Socials</h3>
+<p>https://discord.gg/tFzpgTeJDa</p>
+<p>@umn_blockchain on instagram</p>
 
