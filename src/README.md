@@ -3,22 +3,25 @@
     <li>Create a navbar (a navbar could/should include)</li>
     <ul>
         <li>UMNBC, About Us, Resources, Events</li>
+        <li>Colors are red and white but you're welcome to change it</li>
     </ul>
     <li>You're welcome to check out andysnavbar in github if you want to see an example</li>
 </ul>
 
 <h1> Setup </h1>
 <h3>Intall the npm packages we have on this repository/project</h3>
+<p>Check if you have npm&node on your computer by running npm -v and also node -v</p> <a href="https://www.theodinproject.com/lessons/foundations-installing-node-js">Guide to installation</a>
+<p>Make sure you have git installed <a href="https://www.theodinproject.com/lessons/foundations-setting-up-git">Follow this tutorial if you don't it installed</a></p>
+<p>Clone this project <a href="https://www.theodinproject.com/lessons/foundations-git-basics">How to clone a github repo (intro to git)</a><p>
 <p>Install all the modules by doing npm i in your terminal<p>
 <h3>Create your own branch</h3>
 <p><strong>If you know about git branches, you can skip this part and just get started on the navbar</strong></p>
-<p>Colors are red and white but you're welcome to change it</p>
-<p>Make sure you have git installed <a href="https://www.theodinproject.com/lessons/foundations-setting-up-git">Follow this tutorial if you don't it installed</a></p>
-<p>Once you're in the correct directory, you can now create your own branch and work in that branch (scroll below if you need help moving directories)</p>
+<p>Go to the correct directory, once you're there you can make your own branch (scroll below if you need help moving directories)</p>
+<p>Create your own branch by doing:</p>
 <ul>
 <li>git branch yourname_navbar</li>
 <li>git checkout yourname_navbar</li>
-<li>Note: yourname_navbar can be anything, it's just to make things simpler if we name it your name + navbar for aesthetic purposes</li>
+<li>Note: yourname_navbar can be anything, it's just to make things simpler if we name it your name + navbar for aesthetic purposes <a href="https://www.theodinproject.com/lessons/foundations-revisiting-rock-paper-scissors">Learn more</a></li>
 <li>Once you're done with your navbar, push the code to the github. If you're unsure how to, read below</li>
 </ul>
 
