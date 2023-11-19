@@ -5,19 +5,21 @@
         <li>UMNBC, About Us, Resources, Events</li>
         <li>Colors are red and white but you're welcome to change it</li>
     </ul>
-    <li>You're welcome to check out andysnavbar in github if you want to see an example</li>
+    <li>Check out andysnavbar in github if you want to see an example</li>
 </ul>
 
 <h1> Setup </h1>
 <h3>Intall the npm packages we have on this repository/project</h3>
-<p>Check if you have npm&node on your computer by running npm -v and also node -v</p> <a href="https://www.theodinproject.com/lessons/foundations-installing-node-js">Guide to installation</a>
-<p>Make sure you have git installed <a href="https://www.theodinproject.com/lessons/foundations-setting-up-git">Follow this tutorial if you don't it installed</a></p>
-<p>Clone this project <a href="https://www.theodinproject.com/lessons/foundations-git-basics">How to clone a github repo (intro to git)</a><p>
-<p>Install all the modules by doing npm i in your terminal<p>
+<p><strong>Skip if you know how to use node,npm, and git, else continue following the steps</strong></p>
+<em>Purpose: To teach you how to clone a github repository onto your computer and tools needed for all future projects</em>
+<p>1. Check if you have npm&node on your computer by running npm -v and also node -v <a href="https://www.theodinproject.com/lessons/foundations-installing-node-js">Guide to installation</a></p>
+<p>2. Make sure you have git installed <a href="https://www.theodinproject.com/lessons/foundations-setting-up-git">Follow this tutorial if you don't it installed</a></p>
+<p>3. Clone this project <a href="https://www.theodinproject.com/lessons/foundations-git-basics">How to clone a github repo (intro to git)</a><p>
+<p>4. Install all the modules by doing npm i in your terminal<p>
 <h3>Create your own branch</h3>
 <p><strong>If you know about git branches, you can skip this part and just get started on the navbar</strong></p>
-<p>Go to the correct directory, once you're there you can make your own branch (scroll below if you need help moving directories)</p>
-<p>Create your own branch by doing:</p>
+<p>5. Go to the correct directory, once you're there you can make your own branch (scroll below if you need help moving directories)</p>
+<p>6. Create your own branch by doing:</p>
 <ul>
 <li>git branch yourname_navbar</li>
 <li>git checkout yourname_navbar</li>
@@ -37,4 +39,8 @@
 </ul>
 
 (capitalization matters so make sure you're typing in things correctly. You can always tab before you finish a word. Example: cd csci11[tab] and "33" would automatically be filled in)
+
+<footer>
+<em>Please reach out if you need help, else you're welcome to used what you just learn to contribute to this repository if you see any grammatical/information errors.</em>
+</footer>
 
