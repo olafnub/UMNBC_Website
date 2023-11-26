@@ -1,3 +1,88 @@
 .App-header {
-  background-color: #282c34;
+  background-color: #4169e1;
+}
+.hero-wrap {
+  border: 1px solid green;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 2rem;
+  justify-content: space-around;
+  position: relative;
+  top: -10%;
+  /* border: 1px solid green; */
+  height: 70vh;
+}
+.left-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  /* border: 1px solid green; */
+}
+.left-hero ul {
+  text-align: left;
+  padding: 0;
+  list-style: none;
+}
+.left-hero li {
+  padding: 0.3rem;
+}
+.left-hero h3 {
+  align-self: flex-start;
+  margin-left: 5rem;
+  margin-bottom: 0;
+}
+.middle-hero {
+  /* border: 1px solid green; */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 2;
+}
+.right-hero {
+  flex: 1;
+}
+.hero-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+.hero-icons {
+  font-size: 25px;
+}
+.hero-corner-name {
+  /* border: 1px solid green; */
+  font-size: larger;
+  text-wrap: wrap;
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #943000;
+}
+
+#discord-button {
+  border: 2px solid #3498db;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white;
+  text-align: center;
+  flex: 0 0 auto;
+}
+#discord-button:hover {
+  background-color: #3498db;
+  cursor: pointer;
+  color: white;
 }

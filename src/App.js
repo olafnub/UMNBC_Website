@@ -1,5 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar.js';
+import grouppic from './images/lionhack2023_group.jpg';
+import {FaInstagram, FaRegCalendarAlt} from 'react-icons/fa';
 
 function App() {
   return (
@@ -7,9 +9,41 @@ function App() {
       <header className="App-header">
         <Navbar/>
       </header>
-        <div class="hero">
-          
+      <div className="hero-wrap">
+        <div className="hero">
+          <div className="left-hero">
+            <h3>Board Members</h3>
+            <ul>
+              <li>Annika: Co-President</li>
+              <li>Jorgen: Co-President</li>
+              <li>Anajli: Officer</li>
+              <li>Jackie: Officer</li>
+              <li>Ahmedt: Officer</li>
+              <li>Andy: Officer</li>
+              <li>Dennis: Officer</li>
+            </ul>
+            <h3>Current Members</h3>
+            
+          </div>
+          <div className="middle-hero">
+            <img style={{width: "100%", margin: "1rem"}} src={grouppic} alt="group of umn blockchain at lionhack 2023"/>
+            <div className="hero-socials">
+              <a style={{color: 'black'}} href="https://www.instagram.com/umn_blockchain"><FaInstagram className="hero-icons"/></a>
+              <a href="https://discord.com/invite/EeVuh24q8E">
+                <button id="discord-button">Join our discord</button>
+              </a>
+              <a style={{color: 'black'}} href="https://discord.gg/HYxB7hkrub"><FaRegCalendarAlt className="hero-icons"/></a>
+            </div>
+          </div>
+          <div className="right-hero">
+            <h3>Current news</h3>
+          </div>
         </div>
+        <div class="hero-corner-name">
+            <h1>University Of Minnesota Blockchain Club</h1>
+        </div>
+      </div>
+      
     </div>
   );
 }

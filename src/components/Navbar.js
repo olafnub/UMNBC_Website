@@ -16,7 +16,7 @@ function NavBar() {
 
     }
     const header = {
-      "color": "red"
+      // "color": "white"
     };
     return (
     <div className="navbar">
