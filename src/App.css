@@ -1,8 +1,20 @@
+* {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color-blue: #4169e1;
+  --primary-color-red: #943000;
+  --button-color: #4169e1; /* same color as primary but too lazy to go and change it, feel free to edit this */
+  --color-white: #f2f2f2;
+
+}
+
 .App-header {
-  background-color: #4169e1;
+  background-color: var(--primary-color-blue);
 }
 .hero-wrap {
-  border: 1px solid green;
+  /* border: 1px solid green; */
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -69,20 +81,53 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  color: #943000;
+  color: var(--primary-color-red);
 }
 
 #discord-button {
-  border: 2px solid #3498db;
+  border: 2px solid var(--button-color);
   padding: 1rem;
   border-radius: 5px;
   font-size: 16px;
-  background-color: white;
+  background-color: var(--color-white);
   text-align: center;
   flex: 0 0 auto;
 }
 #discord-button:hover {
-  background-color: #3498db;
+  background-color: var(--button-color);
   cursor: pointer;
-  color: white;
+  color: var(--color-white);
+}
+
+.about-us {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.about-us h2{
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.card-wrap {
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+.card {
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: center; */
+  background-color: var(--primary-color-blue);
+  color: var(--color-white);
+  height: 100%;
+  width: 30%;
+  font-size: 1.5rem;
+}
+.card p {
+  margin: 2rem 2rem 0.5rem 2rem;
 }

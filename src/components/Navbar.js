@@ -12,20 +12,14 @@ function NavBar() {
       "color": "white",
       "text-decoration": "none"
     }
-    const navLi = {
-
-    }
-    const header = {
-      // "color": "white"
-    };
     return (
     <div className="navbar">
-        <h3 style={header}>UMNBC</h3>
+        <h3><a href="/" style={navAhref}>UMNBC</a></h3>
         <nav>
           <ul style={navUl}>
-            <li style={navLi}><a href="/#" style={navAhref}>About us</a></li>
-            <li style={navLi}><a href="/#" style={navAhref}>Resources</a></li>
-            <li style={navLi}><a href="/#" style={navAhref}>Events</a></li>
+            <li><a href="#aboutUs" style={navAhref}>About us</a></li>
+            <li><a href="/#" style={navAhref}>Resources</a></li>
+            <li><a href="/#" style={navAhref}>Events</a></li>
           </ul>
         </nav>
     </div>
