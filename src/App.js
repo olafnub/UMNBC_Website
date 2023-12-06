@@ -11,12 +11,12 @@ function App() {
 
   // const [results, setResults] = useState(null);
 
-  // useEffect(() => {
-  //   fetch(URL)
-  //     .then(res => console.log(res))
-  //     .then(data => console.log(data));
+  useEffect(() => {
+    fetch(URL)
+      .then(res => console.log(res))
+      .then(data => console.log(data));
       
-  // }, []);
+  }, []);
 
   return (
     <div className="App">
