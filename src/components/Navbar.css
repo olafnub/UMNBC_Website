@@ -7,3 +7,26 @@
     margin: 0 2rem;
     color: white;  /* change white color code */
 }
+.navUl {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    margin: 2rem;
+}
+.navAhref {
+    color: white;
+    text-decoration: none;
+}
+
+/* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
+@media screen and (max-width: 1024px) {
+
+
+
+}
+/* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
+
+@media screen and (max-width: 600px) {
+
+}

@@ -47,8 +47,6 @@
   padding: 0.3rem;
 }
 .left-hero h3 {
-  align-self: flex-start;
-  margin-left: 5rem;
   margin-bottom: 0;
 }
 .middle-hero {
@@ -130,4 +128,16 @@
 }
 .card p {
   margin: 2rem 2rem 0.5rem 2rem;
+}
+
+                                /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
+@media screen and (max-width: 1024px) {
+
+  
+
+}
+/* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
+
+@media screen and (max-width: 600px) {
+
 }
