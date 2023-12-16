@@ -3,21 +3,7 @@ import Navbar from "./components/Navbar.js";
 import grouppic from "./images/lionhack2023_group.jpg";
 import { FaInstagram, FaRegCalendarAlt } from "react-icons/fa";
 
-const tokenKey = process.env.REACT_APP_CRYPTOPANIC_APIKEY;
-const URL =
-  "https://cryptopanic.com/api/v1/posts/?auth_token=" +
-  tokenKey +
-  "&public=true";
-
 function App() {
-  // const [results, setResults] = useState(null);
-
-  // useEffect(() => {
-  //   fetch(URL)
-  //     .then(res => console.log(res))
-  //     .then(data => console.log(data));
-
-  // }, []);
 
   return (
     <div className="App">
