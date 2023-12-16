@@ -6,26 +6,36 @@ function NavBar() {
   const [backEndData, setBackEndData] = useState(null);
 
   useEffect(() => {
-
     fetch("/api")
     .then(res => res.json())
     .then(data => setBackEndData(data));
+
   }, []);
 
-  console.log(backEndData);
-
+  function formatPrice(price) {
+    const threshold = 1;
+    
+    if (price < threshold) {
+      return price.toFixed(5);
+    } else {
+      return price.toFixed(2);
+    }
+  }
 
     return (
     <div className="navbar">
         <h3><a href="/" className="navAhref">UMNBC</a></h3>
         <ul className="priceNav">
-            <li>Lorem pa</li>
-            <li>Lorem pa</li>
-            <li>LoremLoremLoremLoremLorem</li>
-            <li>LoremLoremLoremLoremLorem</li>
-            <li>LoremLoremLoremLoremLorem</li>
-            <li>LoremLoremLoremLoremLorem</li>
-            <li>Doesthishoweverything?</li>
+          
+          {backEndData && backEndData[0].data ? (
+            backEndData[0].data.map((crypto, i) => (
+              <li key={i}>{crypto.name} : {formatPrice(crypto.quote.USD.price)}</li>
+              ))
+            ) : (
+              <p>Loading...</p>
+            )
+          }
+
           </ul>
         <nav>
           <ul className="navUl">

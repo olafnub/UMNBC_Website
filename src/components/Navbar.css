@@ -44,7 +44,7 @@ ul, li {
     position: absolute;
     display: flex;
     width: 75%;
-    /* animation: scroll 25s infinite linear; */
+    animation: scroll 30s infinite linear;
     /* Should Implement a pause feature */
 }
 .priceNav li {
