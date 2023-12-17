@@ -67,7 +67,7 @@
   text-align: center;
 }
 .news-box {
-  border: 1px solid green;
+  border: 3px solid black;
   margin: 1rem;
   overflow-y: scroll;
   height: 85%;

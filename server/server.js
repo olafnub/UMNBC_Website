@@ -9,6 +9,7 @@ const PORT = process.env.PORT || 8888;
 
 const COINMARKETAPI = process.env.REACT_APP_COINMARKETCAP_APIKEY;
 const CRYPTOPANICAPI = process.env.REACT_APP_CRYPTOPANIC_APIKEY;
+const DISCORDAPI = process.env.REACT_APP_DISCORD_APIKEY;
 
 app.get("/coin-market/api", (req, res) => {
     res.json(cryptodata); // replace later with actual coinmarket fetch
@@ -30,6 +31,11 @@ app.get("/crypto-panic/api", (req, res) => {
     res.json(panicdata);
 });
 
+app.get("/discord/api", (req, res) => {
+    fetch(`https://discord.com/api/guilds/${DISCORDAPI}/widget.json`)
+    .then(discordResponse => discordResponse.json())
+    .then(data => res.json(data));
+})
 app.listen(PORT, () => {
     console.log("Server listening on 8888");
 });

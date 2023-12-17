@@ -24,8 +24,26 @@ function App() {
   }, []);
 
   function convertTime(timeInput) {
-    let currentTime = new Date();
-    console.log(timeInput);
+    let currentTime = new Date();  
+    let givenTime = new Date(timeInput);
+
+    let monthDifference = (currentTime.getFullYear() - givenTime.getFullYear()) * 12 + currentTime.getMonth() - givenTime.getMonth();
+
+    if (monthDifference > 0) {
+      return monthDifference > 1 ? monthDifference + " months ago" : monthDifference + " month ago";
+    } else {
+        let dayDifference = currentTime.getDate() - givenTime.getDate();
+        if (dayDifference > 0) {
+          return dayDifference > 1 ? dayDifference + " days ago" : dayDifference + " day ago";
+        } else {
+          let minuteDifference = currentTime.getMinutes() - givenTime.getMinutes();
+            if (minuteDifference > 0) {
+              return minuteDifference > 1 ? minuteDifference + " minutes ago" : minuteDifference + " minute ago";
+            } else {
+              return "Just now";
+            }
+        }
+      }
   }
 
   return (
@@ -36,16 +54,7 @@ function App() {
       <div className="hero-wrap">
         <div className="hero">
           <div className="left-hero">
-            <h3>Board Members</h3>
-            <ul>
-              <li>Annika: Co-President</li>
-              <li>Jorgen: Co-President</li>
-              <li>Anajli: Officer</li>
-              <li>Jackie: Officer</li>
-              <li>Ahmed: Officer</li>
-              <li>Andy: Officer</li>
-            </ul>
-            <h3>Current Members</h3>
+            <iframe src="https://discord.com/widget?id=875828297894866954&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
           </div>
           <div className="middle-hero">
             <img
@@ -78,7 +87,7 @@ function App() {
               <ul>
               {newsData && newsData.results && newsData.results.length > 0 ? (
                 newsData.results.map((news, i) => (
-                  <li key={i}><a href={news.url}>{news.title}</a><p>{convertTime(news.created_at)}</p></li>
+                  <li key={i}><a href={news.url}>{news.title}</a><p> {convertTime(news.created_at)}</p></li>
                 ))
               ) : (
                 <p>Loading...</p>
