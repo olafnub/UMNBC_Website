@@ -2,8 +2,31 @@ import "./App.css";
 import Navbar from "./components/Navbar.js";
 import grouppic from "./images/lionhack2023_group.jpg";
 import { FaInstagram, FaRegCalendarAlt } from "react-icons/fa";
+import {useEffect, useState} from 'react';
 
 function App() {
+
+  const [newsData, setNewsData] = useState(null);
+
+  useEffect(() => {
+    let isMounted = true;
+    fetch("/crypto-panic/api")
+    .then(res => res.json())
+    .then(data => {
+      if (isMounted) {
+        setNewsData(data)
+      }
+    })
+    .catch(err => console.log("Cryptopanic error: ", err));
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  function convertTime(timeInput) {
+    let currentTime = new Date();
+    console.log(timeInput);
+  }
 
   return (
     <div className="App">
@@ -21,12 +44,12 @@ function App() {
               <li>Jackie: Officer</li>
               <li>Ahmed: Officer</li>
               <li>Andy: Officer</li>
-              <li>Dennis: Officer</li>
             </ul>
             <h3>Current Members</h3>
           </div>
           <div className="middle-hero">
             <img
+              id="groupPic"
               style={{ width: "100%", margin: "1rem" }}
               src={grouppic}
               alt="group of umn blockchain at lionhack 2023"
@@ -50,8 +73,18 @@ function App() {
             </div>
           </div>
           <div className="right-hero">
-            <h3>Current news</h3>
-            <iframe width="90%" scrolling="yes" allowtransparency="true" frameborder="0" src="https://cryptopanic.com/widgets/news/?bg_color=FFFFFF&amp;font_family=sans&amp;header_bg_color=30343B&amp;header_text_color=FFFFFF&amp;link_color=0091C2&amp;news_feed=trending&amp;posts_limit=15&amp;text_color=333333&amp;title=Trending" height="350px"></iframe>
+            <h3>Latest news</h3>
+            <div class="news-box">
+              <ul>
+              {newsData && newsData.results && newsData.results.length > 0 ? (
+                newsData.results.map((news, i) => (
+                  <li key={i}><a href={news.url}>{news.title}</a><p>{convertTime(news.created_at)}</p></li>
+                ))
+              ) : (
+                <p>Loading...</p>
+              )}
+              </ul>
+            </div>
           </div>
         </div>
         <div class="hero-corner-name">

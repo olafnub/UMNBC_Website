@@ -6,10 +6,12 @@ function NavBar() {
   const [backEndData, setBackEndData] = useState(null);
 
   useEffect(() => {
-    fetch("/api")
-    .then(res => res.json())
-    .then(data => setBackEndData(data));
-
+    fetch("/coin-market/api")
+    .then(res => {
+      return res.json()
+    })
+    .then(data => setBackEndData(data))
+    .catch(err => console.log("Error fetching coinmarket: ", err));
   }, []);
 
   function formatPrice(price) {
@@ -27,8 +29,8 @@ function NavBar() {
         <h3><a href="/" className="navAhref">UMNBC</a></h3>
         <ul className="priceNav">
           
-          {backEndData && backEndData[0].data ? (
-            backEndData[0].data.map((crypto, i) => (
+          {backEndData && backEndData.data && backEndData.data.length > 0 ? (
+            backEndData.data.map((crypto, i) => (
               <li key={i}>{crypto.name} : {formatPrice(crypto.quote.USD.price)}</li>
               ))
             ) : (

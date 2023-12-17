@@ -67,9 +67,6 @@ ul, li {
 
 /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
 @media screen and (max-width: 1024px) {
-    .hero {
-        gap: 1rem;
-    }
     .priceNav {
         display: none;
         animation: none;
