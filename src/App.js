@@ -7,6 +7,7 @@ import {useEffect, useState} from 'react';
 function App() {
 
   const [newsData, setNewsData] = useState(null);
+  const [discordData, setDiscordData] = useState(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -18,6 +19,15 @@ function App() {
       }
     })
     .catch(err => console.log("Cryptopanic error: ", err));
+
+    fetch("/discord/api")
+    .then(res => res.json())
+    .then(data => {
+      if (isMounted) {
+        setDiscordData(data);
+      }
+    })
+    .catch(err => console.log("Discord error ", err));
     return () => {
       isMounted = false;
     };
@@ -46,6 +56,8 @@ function App() {
       }
   }
 
+  console.log(discordData);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -54,7 +66,17 @@ function App() {
       <div className="hero-wrap">
         <div className="hero">
           <div className="left-hero">
-            <iframe src="https://discord.com/widget?id=875828297894866954&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <h3>Members</h3>
+            <ul>
+              {discordData && discordData.members && discordData.members.length > 0 ? (
+                discordData.members.map((member, key) => (
+                  <li id={key}><img src={member.avatar_url} alt="profile"/>{member.username}</li>
+                ))
+              ) : (
+                <p>Loading...</p>
+              )}
+            </ul>
+            {/* Discord Iframe code (replace later) */}
           </div>
           <div className="middle-hero">
             <img

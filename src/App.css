@@ -39,13 +39,16 @@
   /* border: 1px solid green; */
 }
 .left-hero ul {
-  text-align: left;
   padding: 0;
   list-style: none;
+  overflow-y: scroll;
 }
 .left-hero li {
   padding: 0.3rem;
-  text-align: center;
+  text-align: left;
+}
+.left-hero li img{
+  width: 10%;
 }
 .left-hero h3 {
   margin-bottom: 0;
