@@ -16,4 +16,4 @@
     - npm run dev (once you are in the server folder)
 
 ## If you need help with cd and terminal
-    - <a href="https://www.theodinproject.com/lessons/foundations-command-line-basics#use-the-command-line-like-a-pro">https://www.theodinproject.com/lessons/foundations-command-line-basics#use-the-command-line-like-a-pro</a>
+<a href="https://www.theodinproject.com/lessons/foundations-command-line-basics#use-the-command-line-like-a-pro">https://www.theodinproject.com/lessons/foundations-command-line-basics#use-the-command-line-like-a-pro</a>
