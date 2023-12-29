@@ -36,7 +36,12 @@
   align-items: center;
   flex-direction: column;
   flex: 1;
-  /* border: 1px solid green; */
+}
+.discord-box {
+  background-color: #cdb4db;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .left-hero ul {
   padding: 0;
@@ -49,6 +54,7 @@
 }
 .left-hero li img{
   width: 10%;
+  padding-right: 0.3rem;
 }
 .left-hero h3 {
   margin-bottom: 0;
@@ -69,11 +75,14 @@
   background-color: white;
   text-align: center;
 }
-.news-box {
+.news-box, .discord-box {
   border: 3px solid black;
   margin: 1rem;
   overflow-y: scroll;
   height: 85%;
+}
+.news-box {
+  background-color: #fefae0;
 }
 .news-box ul {
   padding: 0;
