@@ -1,38 +1,187 @@
-.App {
-  text-align: center;
+* {
+  scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+:root {
+  --primary-color-blue: #4169e1;
+  --primary-color-red: #943000;
+  --button-color: #4169e1; /* same color as primary but too lazy to go and change it, feel free to edit this */
+  --color-white: #f2f2f2;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--primary-color-blue);
+}
+.hero-wrap {
+  /* border: 1px solid green; */
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 2rem;
+  justify-content: space-around;
+  position: relative;
+  top: -10%;
+  /* border: 1px solid green; */
+  height: 70vh;
+}
+.left-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  /* border: 1px solid green; */
+}
+.left-hero ul {
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+}
+.left-hero li {
+  padding: 0.3rem;
+  text-align: left;
+}
+.left-hero li img{
+  width: 10%;
+}
+.left-hero h3 {
+  margin-bottom: 0;
+}
+.middle-hero {
+  /* border: 1px solid green; */
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 2;
+}
+.right-hero {
+  flex: 1;
+}
+.right-hero h3 {
+  background-color: white;
+  text-align: center;
+}
+.news-box {
+  border: 3px solid black;
+  margin: 1rem;
+  overflow-y: scroll;
+  height: 85%;
+}
+.news-box ul {
+  padding: 0;
+}
+.news-box ul li{
+  list-style: none;
+  margin: 1rem;
+}
+.news-box li p {
+  font-size: small;
+  display: inline;
+}
+.news-box a {
+  color: var(--button-color);
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.news-box a:hover {
+  text-decoration: underline;
+}
+.hero-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+.hero-icons {
+  font-size: 25px;
+}
+.hero-corner-name {
+  /* border: 1px solid green; */
+  font-size: larger;
+  text-wrap: wrap;
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--primary-color-red);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#discord-button {
+  border: 2px solid var(--button-color);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--color-white);
+  text-align: center;
+  flex: 0 0 auto;
+}
+#discord-button:hover {
+  background-color: var(--button-color);
+  cursor: pointer;
+  color: var(--color-white);
+}
+
+.about-us {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.about-us h2{
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.card-wrap {
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+.card {
+  background-color: var(--primary-color-blue);
+  color: var(--color-white);
+  height: 100%;
+  width: 30%;
+  font-size: 1.5rem;
+}
+.card p {
+  margin: 2rem 2rem 0.5rem 2rem;
+}
+
+                                /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
+@media screen and (max-width: 1024px) {
+   .hero {
+        gap: 1rem;
+        flex-direction: column-reverse;
+        top: 0;
+    }
+    #groupPic {
+      width: 80%;
+    }
+    .left-hero {
+      flex-direction: row;
+      justify-content: center;
+    }
+    .left-hero ul {
+      display: flex;
+    }
+  
+
+}
+/* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
+
+@media screen and (max-width: 600px) {
+
 }

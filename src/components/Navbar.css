@@ -1,0 +1,90 @@
+:root {
+    --primary-color-blue: #4169e1;
+    --primary-color-red: #943000;
+    --button-color: #4169e1; /* same color as primary but too lazy to go and change it, feel free to edit this */
+    --color-white: #f2f2f2;
+  
+}
+ul, li {
+    list-style: none;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #d9d9d9;
+    padding: 1rem 0;
+    overflow:hidden; 
+}
+.navUl {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    background-color:var(--primary-color-blue);
+    z-index: 200;
+}
+.navAhref {
+    position: sticky;
+    display: flex;
+    align-items: center;
+    color: var(--color-white);
+    text-decoration: none;
+    z-index: 200;
+    background-color: var(--primary-color-blue);
+    padding: 0 24px;
+}
+.priceNav {
+    transform: translateX(90px);
+    position: absolute;
+    display: flex;
+    width: 75%;
+    animation: scroll 30s infinite linear;
+    /* Should Implement a pause feature */
+}
+.priceNav li {
+    white-space: nowrap;
+    padding-right: 18px;
+}
+.priceNav li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100px);
+    }
+
+    to {
+        transform: translateX(-1259px);
+    }
+}
+
+/* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
+@media screen and (max-width: 1024px) {
+    .priceNav {
+        display: none;
+        animation: none;
+    }
+
+
+}
+/* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
+
+@media screen and (max-width: 600px) {
+    .priceNav {
+        display: none;
+        animation: none;
+    }
+    .navUl {
+        display: none;
+    }
+    .navbar {
+        text-align: center;
+    }
+}
