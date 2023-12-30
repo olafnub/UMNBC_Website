@@ -68,6 +68,10 @@
   align-items: center;
   flex: 2;
 }
+#groupPic {
+  width: 100%;
+  margin: 1rem;
+}
 .right-hero {
   flex: 1;
 }
@@ -192,5 +196,10 @@
 /* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
 
 @media screen and (max-width: 600px) {
-
+  #groupPic {
+    width: 14%;
+  }
+  .hero-corner-name {
+    display: none;
+  }
 }

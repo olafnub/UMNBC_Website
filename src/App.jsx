@@ -36,7 +36,6 @@ function App() {
             <div className="middle-hero">
               <img
                 id="groupPic"
-                style={{ width: "100%", margin: "1rem" }}
                 src={grouppic}
                 alt="group of umn blockchain at lionhack 2023"
               />
@@ -94,6 +93,10 @@ function App() {
           <a href="https://discord.com/invite/EeVuh24q8E">
             <button id="discord-button">View our upcoming</button>
           </a>
+          <div className="our-team">
+            <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>Meet our team</h2>
+            
+          </div>
         </div>
       </div>
     </Layout>
