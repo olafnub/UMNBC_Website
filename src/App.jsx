@@ -28,7 +28,7 @@ function App() {
   return (
     <Layout>
       <div className="App">
-        <div className="hero-wrap">
+        <div className="hero-wrap page-wrap">
           <div className="hero">
             <div className="left-hero">
               <DiscordMemberList discordMembers={discordMembers} />
@@ -65,7 +65,7 @@ function App() {
             <h1>University Of Minnesota Blockchain Club</h1>
           </div>
         </div>
-        <div className="about-us" id="aboutUs">
+        <div className="about-us page-wrap" id="aboutUs">
           <h2>Why Blockchain</h2>
           <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
             More About Our Club
@@ -93,10 +93,12 @@ function App() {
           <a href="https://discord.com/invite/EeVuh24q8E">
             <button id="discord-button">View our upcoming</button>
           </a>
-          <div className="our-team">
-            <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>Meet our team</h2>
-            
-          </div>
+        </div>
+        <div className="we-offer page-wrap" id="weOffer">
+        <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>What we offer</h2>
+        </div>
+        <div className="our-team page-wrap" id="ourTeam">
+          <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>Meet our team</h2>
         </div>
       </div>
     </Layout>

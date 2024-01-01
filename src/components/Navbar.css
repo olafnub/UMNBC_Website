@@ -14,12 +14,11 @@ ul, li {
     top: 0;
     left: 0;
     right: 0;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #d9d9d9;
-    padding: 1rem 0;
+    padding: 2rem 0;
     overflow:hidden; 
 }
 .navUl {
