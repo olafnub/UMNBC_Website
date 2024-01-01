@@ -241,3 +241,7 @@
     font-size: 2rem;
   }
 }
+                          /* Our team */
+.our-team {
+  flex-direction: column;
+}
