@@ -186,7 +186,7 @@
 }
 .we-offer {
   flex-direction:column;
-  height: 80vh;
+  height: 73vh;
 }
 .artboard {
   border: 1px solid green;
@@ -216,6 +216,22 @@
 .color-purple {
   color: #7209b7;
   font-weight: bolder;
+}
+                          /* Our team */
+.our-team {
+  flex-direction: column;
+  margin: 2rem;
+}
+.officer-box p {
+  font-weight: 250;
+}
+.officer-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(16%, 1fr));
+  gap: 20px;
+}
+#nft-disclosure {
+  margin-top: 1rem;
 }
 
                                 /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
@@ -276,8 +292,4 @@
     width: 75%;
     font-size: 2rem;
   }
-}
-                          /* Our team */
-.our-team {
-  flex-direction: column;
 }
