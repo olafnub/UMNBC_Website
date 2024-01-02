@@ -3,6 +3,10 @@
   color: #212529;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --primary-color-blue: #4169e1;
   --primary-color-red: #943000;
@@ -22,6 +26,7 @@
   height: 95vh;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 2rem;
 
 }
 .hero {
@@ -156,6 +161,7 @@
 .about-us {
   flex-direction: column;
   height: auto;
+  margin-bottom: 3rem;
 }
 .about-us h2{
   font-size: 1.5rem;
@@ -179,7 +185,37 @@
   margin: 2rem;
 }
 .we-offer {
-  align-items: normal;
+  flex-direction:column;
+  height: 80vh;
+}
+.artboard {
+  border: 1px solid green;
+  text-align:justify;
+  overflow: hidden;
+}
+.color-blue {
+  color: #118ab2;
+  font-weight: bolder;
+}
+.color-dark-blue {
+  color: #073b4c;
+  font-weight: bolder;
+}
+.color-red {
+  color: #ef476f;
+  font-weight: bolder;
+}
+.color-yellow {
+  color: #fca311;
+  font-weight: bolder;
+}
+.color-green {
+  color: #6a994e;
+  font-weight: bolder;
+}
+.color-purple {
+  color: #7209b7;
+  font-weight: bolder;
 }
 
                                 /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
