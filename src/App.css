@@ -1,6 +1,11 @@
 * {
   scroll-behavior: smooth;
+  color: #212529;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --primary-color-blue: #4169e1;
@@ -9,16 +14,20 @@
   --color-white: #f2f2f2;
 
 }
+.App {
+  background-image: url("./images/white-abstract-background.jpg");
+}
 
 .App-header {
   background-color: var(--primary-color-blue);
 }
-.hero-wrap {
-  /* border: 1px solid green; */
+.page-wrap {
   display: flex;
-  height: 100vh;
-  justify-content: center;
+  height: 95vh;
+  justify-content: flex-start;
   align-items: center;
+  margin-bottom: 2rem;
+
 }
 .hero {
   display: flex;
@@ -27,7 +36,7 @@
   gap: 2rem;
   justify-content: space-around;
   position: relative;
-  top: -10%;
+  top: -8%;
   /* border: 1px solid green; */
   height: 70vh;
 }
@@ -36,6 +45,8 @@
   align-items: center;
   flex-direction: column;
   flex: 1;
+  height: 100%;
+  color: black;
 }
 .discord-box {
   background-color: #cdb4db;
@@ -51,6 +62,7 @@
 .left-hero li {
   padding: 0.3rem;
   text-align: left;
+  display: flex;
 }
 .left-hero li img{
   width: 10%;
@@ -68,11 +80,15 @@
   align-items: center;
   flex: 2;
 }
+#groupPic {
+  width: 100%;
+  margin: 1rem;
+}
 .right-hero {
   flex: 1;
+  height: 100%;
 }
 .right-hero h3 {
-  background-color: white;
   text-align: center;
 }
 .news-box, .discord-box {
@@ -115,13 +131,16 @@
 }
 .hero-corner-name {
   /* border: 1px solid green; */
-  font-size: larger;
-  text-wrap: wrap;
-  width: 40%;
   position: absolute;
   bottom: 0;
   left: 0;
+}
+.hero-corner-name h1{
   color: var(--primary-color-red);
+  font-size: 3rem;
+  text-wrap: wrap;
+  width: 85%;
+  font-weight: 700;
 }
 
 #discord-button {
@@ -140,10 +159,9 @@
 }
 
 .about-us {
-  display: flex;
-  height: 100vh;
-  align-items: center;
   flex-direction: column;
+  height: auto;
+  margin-bottom: 3rem;
 }
 .about-us h2{
   font-size: 1.5rem;
@@ -151,7 +169,6 @@
   padding: 0;
 }
 .card-wrap {
-  height: 60%;
   display: flex;
   justify-content: space-evenly;
   gap: 1rem;
@@ -160,13 +177,61 @@
 }
 .card {
   background-color: var(--primary-color-blue);
-  color: var(--color-white);
-  height: 100%;
   width: 30%;
   font-size: 1.5rem;
 }
 .card p {
-  margin: 2rem 2rem 0.5rem 2rem;
+  color: var(--color-white);
+  margin: 2rem;
+}
+.we-offer {
+  flex-direction:column;
+  height: 73vh;
+}
+.artboard {
+  border: 1px solid green;
+  text-align:justify;
+  overflow: hidden;
+}
+.color-blue {
+  color: #118ab2;
+  font-weight: bolder;
+}
+.color-dark-blue {
+  color: #073b4c;
+  font-weight: bolder;
+}
+.color-red {
+  color: #ef476f;
+  font-weight: bolder;
+}
+.color-yellow {
+  color: #fca311;
+  font-weight: bolder;
+}
+.color-green {
+  color: #6a994e;
+  font-weight: bolder;
+}
+.color-purple {
+  color: #7209b7;
+  font-weight: bolder;
+}
+                          /* Our team */
+.our-team {
+  flex-direction: column;
+  margin: 2rem;
+}
+.officer-box p {
+  font-weight: 250;
+}
+.officer-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(16%, 1fr));
+  gap: 20px;
+}
+#nft-disclosure {
+  margin-top: 1rem;
 }
 
                                 /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
@@ -192,5 +257,39 @@
 /* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
 
 @media screen and (max-width: 600px) {
-
+  #groupPic {
+    width: 14%;
+  }
+  .hero-corner-name {
+    display: none;
+  }
+  .hero {
+    position:unset;
+    gap: 0;
+    flex-direction:column;
+    justify-content:unset;
+    top: 0;
+  }
+  .hero-wrap {
+    height: 118vh;
+    align-items: normal;
+  }
+  .left-hero, .right-hero {
+    height: 55%;
+    margin-bottom: 1rem;
+  }
+  .left-hero {
+    order: 2;
+  }
+  .card-wrap {
+    flex-direction: column;
+    height: unset;
+    align-items: center;
+    width: unset;
+  }
+  .card {
+    height: 55vh;
+    width: 75%;
+    font-size: 2rem;
+  }
 }

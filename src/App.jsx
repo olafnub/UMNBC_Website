@@ -6,6 +6,9 @@ import DiscordMemberList from "./components/DiscordMemberList.jsx";
 import NewsList from "./components/NewsList.jsx";
 import autoFetch from "./utils/autoFetch.js";
 import Layout from "./components/Layout.jsx";
+import MoreAboutClub from './components/MoreAboutClub.jsx';
+import WeOffer from './components/WeOffer.jsx';
+import OurTeam from './components/OurTeam.jsx';
 
 function App() {
   const [newsResults, setNewsResults] = useState(null);
@@ -28,7 +31,7 @@ function App() {
   return (
     <Layout>
       <div className="App">
-        <div className="hero-wrap">
+        <div className="hero-wrap page-wrap">
           <div className="hero">
             <div className="left-hero">
               <DiscordMemberList discordMembers={discordMembers} />
@@ -36,7 +39,6 @@ function App() {
             <div className="middle-hero">
               <img
                 id="groupPic"
-                style={{ width: "100%", margin: "1rem" }}
                 src={grouppic}
                 alt="group of umn blockchain at lionhack 2023"
               />
@@ -66,34 +68,21 @@ function App() {
             <h1>University Of Minnesota Blockchain Club</h1>
           </div>
         </div>
-        <div className="about-us" id="aboutUs">
+        <div className="about-us page-wrap" id="aboutUs">
           <h2>Why Blockchain</h2>
-          <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
-            More About Our Club
-          </h2>
-          <div className="card-wrap">
-            <div className="card">
-              <p>
-                Blockchain is an emerging field with over 300 million people
-                involved in either investing or developing
-              </p>
-            </div>
-            <div className="card">
-              <p>
-                Great way to network and meet people in the web3 industry as
-                well software engineers, lawyers, economists, artists, and more
-              </p>
-            </div>
-            <div className="card">
-              <p>
-                We meet every wednesday from 7pm-8pm and will also have free
-                food. We teach terms and discuss with each other every meeting
-              </p>
-            </div>
+          <MoreAboutClub />
+        </div>
+        <div className="we-offer page-wrap" id="weOffer">
+          <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>What we offer</h2>
+          <WeOffer />
+        </div>
+        <div className="our-team page-wrap" id="ourTeam">
+          <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>Current Officers</h2>
+          <OurTeam />
+          <div id="nft-disclosure">
+            <p>we do not own any of the NFTs, all belong to the original owners | layout idea from <a className="color-red" href="https://www.cornellblockchain.org/">Cornell Blockchain</a></p>
+            {/* We could update with our own NFTs once we  */}
           </div>
-          <a href="https://discord.com/invite/EeVuh24q8E">
-            <button id="discord-button">View our upcoming</button>
-          </a>
         </div>
       </div>
     </Layout>

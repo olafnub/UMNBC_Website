@@ -29,13 +29,13 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a href="/#" className="navAhref">
+            <a href="#weOffer" className="navAhref">
               Resources
             </a>
           </li>
           <li>
-            <a href="/#" className="navAhref">
-              Alumini
+            <a href="#ourTeam" className="navAhref">
+              Team
             </a>
           </li>
           <li>

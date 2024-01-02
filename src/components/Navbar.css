@@ -3,23 +3,20 @@
     --primary-color-red: #943000;
     --button-color: #4169e1; /* same color as primary but too lazy to go and change it, feel free to edit this */
     --color-white: #f2f2f2;
-  
 }
 ul, li {
     list-style: none;
 }
-
 .navbar {
     position: sticky;
     top: 0;
     left: 0;
     right: 0;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #d9d9d9;
-    padding: 1rem 0;
+    padding: 2rem 0;
     overflow:hidden; 
 }
 .navUl {
