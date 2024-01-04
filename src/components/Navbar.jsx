@@ -1,16 +1,43 @@
 import CoinTicker from "./CoinTicker";
 import { useEffect, useState } from "react";
-import "./Navbar.css";
+import "./Navbar.scss";
 import autoFetch from "../utils/autoFetch";
+import {FaBars} from 'react-icons/fa';
 
 function Navbar() {
   const [coinData, setCoinData] = useState(null);
+  const [btnToggle, setBtnToggle] = useState(false);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
+
+  const toggleMenu = () => {
+    if (innerWidth < 600 && btnToggle === false) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "auto";
+    }
+    setBtnToggle(!btnToggle);
+  }
 
   useEffect(() => {
     (async () => {
       const coinData = await autoFetch("/coin-market/api");
       setCoinData(coinData?.data);
     })();
+
+    const checkWidth = () => {
+      setInnerWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", checkWidth);
+
+    return () => {
+      window.removeEventListener("resize", checkWidth);
+    }
+
   }, []);
 
   return (
@@ -22,7 +49,13 @@ function Navbar() {
       </h3>
       <CoinTicker coinData={coinData} />
       <nav>
-        <ul className="navUl">
+        {(btnToggle || innerWidth > 600) && (
+          <ul onClick={toggleMenu} className="navUl">
+          <li>
+            <a href="#" className="navAhref active">
+              Home
+            </a>
+          </li>
           <li>
             <a href="#aboutUs" className="navAhref">
               About us
@@ -38,12 +71,9 @@ function Navbar() {
               Team
             </a>
           </li>
-          <li>
-            <a href="/#" className="navAhref">
-              Events
-            </a>
-          </li>
         </ul>
+        )}
+        <button onClick={toggleMenu} id="navButton"><FaBars className="hero-icons" /></button>
       </nav>
     </div>
   );
