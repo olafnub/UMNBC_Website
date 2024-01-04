@@ -233,6 +233,21 @@
 #nft-disclosure {
   margin-top: 1rem;
 }
+footer {
+  height: 30vh;
+  border-top: 3px solid var(--primary-color-blue);
+}
+footer, footer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul {
+  gap: 2rem;
+}
+footer img {
+  width: 20%;
+}
 
                                 /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
 @media screen and (max-width: 1024px) {

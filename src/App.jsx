@@ -9,6 +9,7 @@ import Layout from "./components/Layout.jsx";
 import MoreAboutClub from './components/MoreAboutClub.jsx';
 import WeOffer from './components/WeOffer.jsx';
 import OurTeam from './components/OurTeam.jsx';
+import Footer from './components/Footer.jsx';
 
 function App() {
   const [newsResults, setNewsResults] = useState(null);
@@ -84,6 +85,7 @@ function App() {
             {/* We could update with our own NFTs once we  */}
           </div>
         </div>
+       <Footer />
       </div>
     </Layout>
   );
