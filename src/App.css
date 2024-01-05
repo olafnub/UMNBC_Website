@@ -27,7 +27,6 @@
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 2rem;
-
 }
 .hero {
   display: flex;
@@ -252,22 +251,48 @@ footer img {
 
                                 /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
 @media screen and (max-width: 1024px) {
-   .hero {
-        gap: 1rem;
-        flex-direction: column-reverse;
-        top: 0;
+    .hero {
+      flex-direction: row;
+      top: 0%;
+      gap: 0;
+      justify-content: unset;
+      position: unset;
+      height: 70vh;
+    }
+    .hero-corner-name {
+      display: none;
     }
     #groupPic {
-      width: 80%;
+      width: 100%;
     }
-    .left-hero {
-      flex-direction: row;
-      justify-content: center;
+    .right-hero, .left-hero {
+      height: 52%;
     }
-    .left-hero ul {
-      display: flex;
+    .card {
+      font-size: 1rem;
     }
-  
+    .card p {
+      margin: 1.5rem;
+    }
+    .page-wrap {
+      height: 42vh;
+    }
+    .left-hero li img {
+      width: 18%;
+    }
+    .about-us {
+      height: 35vh;
+    }
+    .artboard {
+      text-align: center;
+    }
+    .artboard.phone-5.horizontal, .artboard.phone-5.artboard-horizontal {
+      width: 90%;
+    }
+    footer {
+      height: 23vh;
+    }
+    
 
 }
 /* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
@@ -275,9 +300,6 @@ footer img {
 @media screen and (max-width: 600px) {
   #groupPic {
     width: 90%;
-  }
-  .hero-corner-name {
-    display: none;
   }
   .hero {
     position:unset;
@@ -303,6 +325,10 @@ footer img {
   }
   .middle-hero {
     margin-bottom: 2rem;
+    order: 0;
+  }
+  .about-us {
+    height: auto;
   }
   .card-wrap {
     flex-direction: column;
@@ -315,12 +341,7 @@ footer img {
     width: 77%;
     font-size: 1rem;
   }
-  .artboard {
-    text-align: center;
-
-  }
   .artboard.phone-5.horizontal, .artboard.phone-5.artboard-horizontal {
-    width: 90%;
     margin-bottom: 1rem;
   }
   .breadcrumbs {
@@ -342,6 +363,7 @@ footer img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
+    height: 30vh;
   }
   footer h2 {
     margin-bottom: 0;

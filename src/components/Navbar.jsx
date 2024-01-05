@@ -52,7 +52,7 @@ function Navbar() {
         {(btnToggle || innerWidth > 600) && (
           <ul onClick={toggleMenu} className="navUl">
           <li>
-            <a href="#" className="navAhref active">
+            <a href="#" className="navAhref active"> {/* Home anchor is valid */} 
               Home
             </a>
           </li>
