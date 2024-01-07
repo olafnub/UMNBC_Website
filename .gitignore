@@ -1,5 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# api files
+server/coinmarket.json
+server/crpytopanic.json
+server/discord.json
+
 # dependencies
 server/node_modules
 /node_modules

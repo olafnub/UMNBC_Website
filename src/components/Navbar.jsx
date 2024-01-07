@@ -24,7 +24,7 @@ function Navbar() {
 
   useEffect(() => {
     (async () => {
-      const coinData = await autoFetch("/coin-market/api");
+      const coinData = await autoFetch("/api/coin-market");
       setCoinData(coinData?.data);
     })();
 
