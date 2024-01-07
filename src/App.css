@@ -1,38 +1,377 @@
+* {
+  scroll-behavior: smooth;
+  color: #212529;
+}
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --primary-color-blue: #4169e1;
+  --primary-color-red: #943000;
+  --button-color: #4169e1; /* same color as primary but too lazy to go and change it, feel free to edit this */
+  --color-white: #f2f2f2;
+
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-image: url("./images/white-abstract-background.jpg");
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--primary-color-blue);
+}
+.page-wrap {
+  display: flex;
+  height: 95vh;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.hero {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  gap: 2rem;
+  justify-content: space-around;
+  position: relative;
+  top: -8%;
+  /* border: 1px solid green; */
+  height: 70vh;
+}
+.left-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  color: black;
+}
+.discord-box {
+  background-color: #cdb4db;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.left-hero ul {
+  padding: 0;
+  list-style: none;
+  overflow-y: scroll;
+}
+.left-hero li {
+  padding: 0.3rem;
+  text-align: left;
+  display: flex;
+}
+.left-hero li img{
+  width: 10%;
+  padding-right: 0.3rem;
+}
+.left-hero h3 {
+  margin-bottom: 0;
+}
+.middle-hero {
+  /* border: 1px solid green; */
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex: 2;
+}
+#groupPic {
+  width: 100%;
+  margin: 1rem;
+}
+.right-hero {
+  flex: 1;
+  height: 100%;
+}
+.right-hero h3 {
+  text-align: center;
+}
+.news-box, .discord-box {
+  border: 3px solid black;
+  margin: 1rem;
+  overflow-y: scroll;
+  height: 85%;
+}
+.news-box {
+  background-color: #fefae0;
+}
+.news-box ul {
+  padding: 0;
+}
+.news-box ul li{
+  list-style: none;
+  margin: 1rem;
+}
+.news-box li p {
+  font-size: small;
+  display: inline;
+}
+.news-box a {
+  color: var(--button-color);
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.news-box a:hover {
+  text-decoration: underline;
+}
+.hero-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+}
+.hero-icons {
+  font-size: 25px;
+}
+.hero-corner-name {
+  /* border: 1px solid green; */
+  position: absolute;
+  bottom: -3rem;
+  left: 0;
+}
+.hero-corner-name h1{
+  color: var(--primary-color-red);
+  font-size: 3rem;
+  text-wrap: wrap;
+  width: 85%;
+  font-weight: 700;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#discord-button {
+  border: 2px solid var(--button-color);
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--color-white);
+  text-align: center;
+  flex: 0 0 auto;
+}
+#discord-button:hover {
+  background-color: var(--button-color);
+  cursor: pointer;
+  color: var(--color-white);
+  transition: 0.25s;
+}
+
+.about-us {
+  flex-direction: column;
+  height: auto;
+  margin-bottom: 3rem;
+}
+.about-us h2{
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+.card-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1rem;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+.card {
+  background-color: var(--primary-color-blue);
+  width: 30%;
+  font-size: 1.5rem;
+}
+.card p {
+  color: var(--color-white);
+  margin: 2rem;
+}
+.we-offer {
+  flex-direction:column;
+  height: 73vh;
+}
+.artboard {
+  border: 1px solid green;
+  text-align:justify;
+  overflow: hidden;
+}
+.color-blue {
+  color: #118ab2;
+  font-weight: bolder;
+}
+.color-dark-blue {
+  color: #073b4c;
+  font-weight: bolder;
+}
+.color-red {
+  color: #ef476f;
+  font-weight: bolder;
+}
+.color-yellow {
+  color: #fca311;
+  font-weight: bolder;
+}
+.color-green {
+  color: #6a994e;
+  font-weight: bolder;
+}
+.color-purple {
+  color: #7209b7;
+  font-weight: bolder;
+}
+                          /* Our team */
+.our-team {
+  flex-direction: column;
+  margin: 2rem;
+}
+.officer-box p {
+  font-weight: 250;
+}
+.officer-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(16%, 1fr));
+  gap: 20px;
+}
+#nft-disclosure {
+  margin-top: 1rem;
+}
+footer {
+  height: 30vh;
+  border-top: 3px solid var(--primary-color-blue);
+}
+footer, footer ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul {
+  gap: 2rem;
+}
+footer img {
+  width: 20%;
+}
+
+                                /* ===== MEDIA QUERIES (MEDIUM DEVICES) ===== */
+@media screen and (max-width: 1024px) {
+    .hero {
+      flex-direction: row;
+      top: 0%;
+      gap: 0;
+      justify-content: unset;
+      position: unset;
+      height: 70vh;
+    }
+    .hero-corner-name {
+      display: none;
+    }
+    #groupPic {
+      width: 100%;
+    }
+    .right-hero, .left-hero {
+      height: 52%;
+    }
+    .card {
+      font-size: 1rem;
+    }
+    .card p {
+      margin: 1.5rem;
+    }
+    .page-wrap {
+      height: 42vh;
+    }
+    .left-hero li img {
+      width: 18%;
+    }
+    .about-us {
+      height: 35vh;
+    }
+    .artboard {
+      text-align: center;
+    }
+    .artboard.phone-5.horizontal, .artboard.phone-5.artboard-horizontal {
+      width: 90%;
+    }
+    footer {
+      height: 23vh;
+    }
+    
+
+}
+/* ===== MEDIA QUERIES (SMALl DEVICES) ===== */
+
+@media screen and (max-width: 600px) {
+  #groupPic {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .hero {
+    position:unset;
+    gap: 0;
+    flex-direction:column;
+    justify-content:unset;
+    top: 0;
+  }
+  .hero-wrap {
+    height: 120vh;
+    align-items: normal;
+  }
+  .left-hero, .right-hero {
+    height: 55%;
+    margin-bottom: 1rem;
+  }
+  .left-hero {
+    order: 2;
+  }
+  .left-hero, .left-hero ul {
+    display: flex;
+    flex-direction: column;
+  }
+  .middle-hero {
+    margin-bottom: 2rem;
+    order: 0;
+  }
+  .about-us {
+    height: auto;
+  }
+  .card-wrap {
+    flex-direction: column;
+    height: unset;
+    align-items: center;
+    width: unset;
+  }
+  .card {
+    height: 21vh;
+    width: 77%;
+    font-size: 1rem;
+  }
+  .artboard.phone-5.horizontal, .artboard.phone-5.artboard-horizontal {
+    margin-bottom: 1rem;
+  }
+  .breadcrumbs {
+    overflow-x:unset;
+  }
+  .breadcrumbs ul li a svg {
+    display: none;
+  }
+  .we-offer {
+    height: 68vh;
+  }
+  .officer-wrap {
+    grid-template-columns: repeat(auto-fill,minmax(31%, 1fr));
+  }
+  .our-team {
+    height: 120vh;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    height: 30vh;
+  }
+  footer h2 {
+    margin-bottom: 0;
+  }
+  footer img {
+    width: 100%;
+  }
+  footer ul {
+    grid-column: span 2;
   }
 }
