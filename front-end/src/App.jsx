@@ -10,6 +10,9 @@ import MoreAboutClub from './components/MoreAboutClub.jsx';
 import WeOffer from './components/WeOffer.jsx';
 import OurTeam from './components/OurTeam.jsx';
 import Footer from './components/Footer.jsx';
+import 'dotenv/config';
+
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 function App() {
   const [newsResults, setNewsResults] = useState(null);
@@ -18,8 +21,8 @@ function App() {
   useEffect(() => {
     (async () => {
       const [newsData, discordData] = await Promise.all([
-        autoFetch("/api/crypto-panic"),
-        autoFetch("/api/discord"),
+        autoFetch(`${SERVER_URL}/api/crypto-panic`),
+        autoFetch(`${SERVER_URL}/api/discord`),
       ]);
 
       setNewsResults(newsData?.results);

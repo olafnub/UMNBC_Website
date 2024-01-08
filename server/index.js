@@ -32,6 +32,10 @@ let cachecontrol = apicache.middleware;
 // Populate api data
 apiUpdate();
 
+app.get("/", (res, res) => {
+  app.send("null");
+})
+
 app.get("/api/coin-market", cachecontrol("5 minutes"), (req, res) => {
   if (req.rateLimit.remaining) {
     res.json(cache.coinmarket);
