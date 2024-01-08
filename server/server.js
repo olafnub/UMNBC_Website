@@ -1,10 +1,22 @@
 import express from "express";
+import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 import apicache from 'apicache';
+import cors from 'cors';
 import apiUpdate, {cache} from './apiUpdate.js';
 import {} from "dotenv/config";
 
 const app = express();
+app.use(helmet());
+app.set("trust proxy", 1);
+
+app.use(cors(
+  {
+    origin: ["http://localhost:3000"],
+    methods: ["GET"],
+    credentials: true
+  }
+));
 
 const PORT = process.env.PORT || 8888;
 
