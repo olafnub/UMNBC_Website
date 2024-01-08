@@ -33,7 +33,7 @@ let cachecontrol = apicache.middleware;
 apiUpdate();
 
 app.get("/", (res, res) => {
-  app.send("null");
+  res.send("null");
 })
 
 app.get("/api/coin-market", cachecontrol("5 minutes"), (req, res) => {
