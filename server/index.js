@@ -12,7 +12,7 @@ app.set("trust proxy", 1);
 
 app.use(cors(
   {
-    origin: ["http://localhost:3000"],
+    origin: ["https://umnblockchain.xyz"],
     methods: ["GET"],
     credentials: true
   }
