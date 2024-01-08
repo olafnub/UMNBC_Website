@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import "./Navbar.scss";
 import autoFetch from "../utils/autoFetch";
 import {FaBars} from 'react-icons/fa';
-import {} from "dotenv/config";
 
 const SERVERURL = process.env.REACT_APP_SERVER_URL;
 

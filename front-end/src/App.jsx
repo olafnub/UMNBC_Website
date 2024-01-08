@@ -10,7 +10,6 @@ import MoreAboutClub from './components/MoreAboutClub.jsx';
 import WeOffer from './components/WeOffer.jsx';
 import OurTeam from './components/OurTeam.jsx';
 import Footer from './components/Footer.jsx';
-import {} from "dotenv/config";
 
 const SERVERURL = process.env.REACT_APP_SERVER_URL;
 
