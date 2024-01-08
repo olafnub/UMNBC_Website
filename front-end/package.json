@@ -12,7 +12,8 @@
     "react-icons": "^4.12.0",
     "react-scripts": "5.0.1",
     "sass": "^1.69.7",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "dotenv": "^16.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -39,7 +40,6 @@
     ]
   },
   "devDependencies": {
-    "daisyui": "^4.4.24",
-    "dotenv": "^16.3.1"
+    "daisyui": "^4.4.24"
   }
 }
