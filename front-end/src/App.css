@@ -357,7 +357,7 @@ footer img {
     grid-template-columns: repeat(auto-fill,minmax(31%, 1fr));
   }
   .our-team {
-    height: 120vh;
+    height: auto;
   }
   footer {
     display: grid;
