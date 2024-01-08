@@ -32,7 +32,7 @@ let cachecontrol = apicache.middleware;
 // Populate api data
 apiUpdate();
 
-app.get("/", (res, res) => {
+app.get("/", (req, res) => {
   res.send("null");
 })
 
