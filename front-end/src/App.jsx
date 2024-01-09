@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const [newsData, discordData] = await Promise.all([
-        autoFetch(`${SERVERURL}/api/crypto-panic`),
+        autoFetch(`${SERVERURL}/data/crypto-panic`),
         autoFetch(`${SERVERURL}/api/discord`),
       ]);
 
@@ -84,7 +84,7 @@ function App() {
           <OurTeam />
           <div id="nft-disclosure">
             <p>we do not own any of the NFTs, all belong to the original owners | layout idea from <a className="color-red" href="https://www.cornellblockchain.org/">Cornell Blockchain</a></p>
-            {/* We could update with our own NFTs once we  */}
+            {/* We could update with our own NFTs once we have them */}
           </div>
         </div>
        <Footer />

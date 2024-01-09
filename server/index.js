@@ -30,7 +30,7 @@ app.use('/api', limit);
 let cachecontrol = apicache.middleware;
 
 // Populate api data
-apiUpdate();
+// apiUpdate();
 
 app.get("/", (req, res) => {
   res.send("null");
@@ -44,12 +44,8 @@ app.get("/api/coin-market", cachecontrol("5 minutes"), (req, res) => {
   }
 });
 
-app.get("/api/crypto-panic", cachecontrol("5 minutes"), (req, res) => {
-  if (req.rateLimit.remaining) {
-    res.json(cache.cryptopanic);
-  } else {
-    res.status(429).json({message: "Please try again later"});
-  }
+app.get("/data/crypto-panic", (req, res) => {
+  res.json(cache.cryptopanic);
 });
 
 app.get("/api/discord", cachecontrol("5 minutes"), (req, res) => {

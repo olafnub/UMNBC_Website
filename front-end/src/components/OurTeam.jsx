@@ -22,7 +22,7 @@ function OurTeam() {
               <p>Social Media</p>
             </div>
             <div className="officer-box">
-              <img src="https://assets-global.website-files.com/65217fd9e31608b8b68141ba/65217fd9e31608b8b6814492_-9ojwcB1tqVmdclia_Sx-oevPA3tjR3E4Y4Qtywk7fp90800zZijuZNz7dsIGPdmsNlpnfq3l1ayZSh1qWraCQqpIuIcNpEuRBg9tW96irdFURf6DDqWgjZ2EKAbqng6wgyhmrxb5fPt20yMRrWwpcg.pnghttps://assets-global.website-files.com/65217fd9e31608b8b68141ba/65217fd9e31608b8b6814492_-9ojwcB1tqVmdclia_Sx-oevPA3tjR3E4Y4Qtywk7fp90800zZijuZNz7dsIGPdmsNlpnfq3l1ayZSh1qWraCQqpIuIcNpEuRBg9tW96irdFURf6DDqWgjZ2EKAbqng6wgyhmrxb5fPt20yMRrWwpcg.png" alt="Nft guy throwing up rainbow"></img>
+              <img src="https://nftcalendar.io/storage/uploads/news/2022/1/iTUhqA1rG1qxWxMUCJqJRn9xRVc6nIG9Rp7uPopc.jpg" alt="Animal drawing with a blue backpack profile picture with a colorful background"></img>
               <h4>Sofia</h4>
               <p>Education</p>
             </div>
