@@ -32,10 +32,6 @@ let cachecontrol = apicache.middleware;
 // Populate api data
 apiUpdate();
 
-app.get("/", (req, res) => {
-  res.send("null");
-})
-
 app.get("/api/coin-market", cachecontrol("5 minutes"), (req, res) => {
   if (req.rateLimit.remaining) {
     res.json(cache.coinmarket);
@@ -55,6 +51,8 @@ app.get("/api/discord", cachecontrol("5 minutes"), (req, res) => {
     res.status(429).json({message: "Please try again later"});
   }
 });
+
+setInterval(apiUpdate, 30 * 60 * 1000);
 
 app.listen(PORT, () => {
   console.log("Server listening on ", PORT);
