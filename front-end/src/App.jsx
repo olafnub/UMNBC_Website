@@ -20,7 +20,7 @@ function App() {
   useEffect(() => {
     (async () => {
       const [newsData, discordData] = await Promise.all([
-        autoFetch(`${SERVERURL}/data/crypto-panic`),
+        autoFetch(`${SERVERURL}/api/crypto-panic`),
         autoFetch(`${SERVERURL}/api/discord`),
       ]);
 
