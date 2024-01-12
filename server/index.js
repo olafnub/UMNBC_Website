@@ -12,7 +12,7 @@ app.set("trust proxy", 1);
 
 app.use(cors(
   {
-    origin: ["https://umnblockchain.xyz"],
+    origin: ["https://umnblockchain.xyz", process.env.REACT_APP_SERVER_URL],
     methods: ["GET"],
     credentials: true
   }
