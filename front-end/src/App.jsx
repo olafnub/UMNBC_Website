@@ -11,7 +11,7 @@ import WeOffer from './components/WeOffer.jsx';
 import OurTeam from './components/OurTeam.jsx';
 import Footer from './components/Footer.jsx';
 
-const SERVERURL = process.env.REACT_APP_SERVER_URL;
+// const SERVERURL = process.env.REACT_APP_SERVER_URL;
 
 function App() {
   const [newsResults, setNewsResults] = useState(null);
@@ -20,8 +20,8 @@ function App() {
   useEffect(() => {
     (async () => {
       const [newsData, discordData] = await Promise.all([
-        autoFetch(`${SERVERURL}/api/crypto-panic`),
-        autoFetch(`${SERVERURL}/api/discord`),
+        autoFetch(`/api/crypto-panic`),
+        autoFetch(`/api/discord`),
       ]);
 
       setNewsResults(newsData?.results);

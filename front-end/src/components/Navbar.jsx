@@ -4,7 +4,7 @@ import "./Navbar.scss";
 import autoFetch from "../utils/autoFetch";
 import {FaBars} from 'react-icons/fa';
 
-const SERVERURL = process.env.REACT_APP_SERVER_URL;
+// const SERVERURL = process.env.REACT_APP_SERVER_URL;
 
 function Navbar() {
   const [coinData, setCoinData] = useState(null);
@@ -26,7 +26,7 @@ function Navbar() {
 
   useEffect(() => {
     (async () => {
-      const coinData = await autoFetch(`${SERVERURL}/api/coin-market`);
+      const coinData = await autoFetch(`/api/coin-market`);
       setCoinData(coinData?.data);
     })();
 
