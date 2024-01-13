@@ -10,13 +10,9 @@ const app = express();
 app.use(helmet());
 app.set("trust proxy", 1);
 
-app.use(cors(
-  {
-    origin: ["https://umnblockchain.xyz", process.env.REACT_APP_SERVER_URL],
-    methods: ["GET"],
-    credentials: true
-  }
-));
+app.use(
+  cors()
+);
 
 const PORT = process.env.PORT || 8888;
 
@@ -44,7 +40,7 @@ app.get("/api/crypto-panic", (req, res) => {
   res.json(cache.cryptopanic);
 });
 
-app.get("/api/discord", cachecontrol("5 minutes"), (req, res) => {
+app.get("/data/discord", cachecontrol("5 minutes"), (req, res) => {
   if (req.rateLimit.remaining) {
     res.json(cache.discord);
   } else {
