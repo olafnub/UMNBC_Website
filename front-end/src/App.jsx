@@ -22,7 +22,7 @@ function App() {
     (async () => {
       const [newsData, discordData] = await Promise.all([
         autoFetch(`${SERVERURL}/api/crypto-panic`),
-        autoFetch(`${SERVERURL}/data/discord`),
+        autoFetch(`${SERVERURL}/api/discord`),
       ]);
 
       setNewsResults(newsData?.results);

@@ -40,7 +40,7 @@ app.get("/api/crypto-panic", (req, res) => {
   res.json(cache.cryptopanic);
 });
 
-app.get("/data/discord", cachecontrol("5 minutes"), (req, res) => {
+app.get("/api/discord", cachecontrol("5 minutes"), (req, res) => {
   if (req.rateLimit.remaining) {
     res.json(cache.discord);
   } else {
