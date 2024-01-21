@@ -42,8 +42,8 @@ let officers = [
     new Officer(
         "https://hellopartner.com/content/images/size/w1600/uz4FXC4Ws_hBBlHGegO5-FkwU9TFA1973dYtW2qZfbJXE-XgRgVy3I8frM-P2HLhBmmRgtHdUL9sK9aIr4ZjF2u8PIqqrZSO6hRBIfk-MNyHksdB2sMWGntaHAx5kHOGTa_ZcNqG.png",
         "Smoking pink bear NFT",
-        "Nithin",
-        "Web Developer"
+        "Abdi",
+        "Treasure"
     ),
     new Officer(
         "https://assets-global.website-files.com/65217fd9e31608b8b68141ba/65217fd9e31608b8b6814490_fQ7W42deNUL4fV_shUyIIVyt9c7RoIUU5gx4oVv9MvQJNLNY6nxBrLBcAv5aJ0jVcppwNLvut5I-ALAT8csQ-cQaJEuPgURTkkX0gg5cFos33USpISZ7PJ_OsHd1WoiwqvuxyYED9Jn0J2X23jEnw9k.png",
@@ -52,10 +52,16 @@ let officers = [
         "Web Developer"
     ),
     new Officer(
+        "https://images.lifestyleasia.com/wp-content/uploads/sites/6/2022/01/14121356/mutant-975x1024-1-1.jpeg",
+        "Cyborg monkey shooting diamond out of eyes",
+        "Adhithi",
+        "Web Developer"
+    ),
+    new Officer(
         "https://assets-global.website-files.com/6241bcd9e666c1514401461d/63a0c5d4a82cab020d4015df_solanredpandas%20upcomingnftdrop%20nftmintradar%20solanadrop.png",
         "Samurai panda with sun glasses",
         "Prashant",
-        "Community Outreach"
+        "Outreach Coordinator"
     ),
     new Officer(
         "https://oh.imgix.net/wp-content/uploads/2022/01/pudgy-penguin-3.jpg?auto=format%2Ccompress&ixlib=php-3.3.0&w=400",
@@ -75,10 +81,12 @@ let officers = [
         "Daigan",
         "Web Developer"
     ),
-
-
-
-
+    new Officer(
+        "https://pbs.twimg.com/media/FbkuRH7VsAE1EzV?format=jpg&name=4096x4096",
+        "Zebra with tie and has cool sunglasses which are purple and green shades",
+        "Aryan",
+        "Education"
+    ),
 ];
 
 export default officers;
