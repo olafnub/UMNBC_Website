@@ -80,7 +80,7 @@ function App() {
           <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>What we offer</h2>
           <WeOffer />
         </div>
-        <div className="our-team page-wrap" id="ourTeam">
+        <div className="our-team" id="ourTeam">
           <h2 style={{ fontSize: "2rem", marginBottom: "1rem"}}>Current Officers</h2>
           <OurTeam />
           <div id="nft-disclosure">
