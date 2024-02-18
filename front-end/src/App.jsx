@@ -68,10 +68,10 @@ function App() {
               <NewsList newsResults={newsResults} />
             </div>
           </div>
-          <div className="hero-corner-name">
+        </div>
+        <div className="hero-corner-name w-full text-center">
             <h1>University Of Minnesota Blockchain Club</h1>
           </div>
-        </div>
         <div className="about-us page-wrap" id="aboutUs">
           <h2>Why Blockchain</h2>
           <MoreAboutClub />
