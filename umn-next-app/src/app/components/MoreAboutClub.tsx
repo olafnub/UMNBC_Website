@@ -1,4 +1,6 @@
-function MoreAboutClub() {
+import Link from 'next/link';
+
+const MoreAboutClub: React.FC = () => {
     return (
         <>
         <h2 style={{ fontSize: "2rem", marginBottom: "1rem" }}>
@@ -24,9 +26,11 @@ function MoreAboutClub() {
               </p>
             </div>
           </div>
-          <a href="https://discord.com/invite/EeVuh24q8E">
-            <button id="discord-button">View our upcoming</button>
-          </a>
+          <Link href="https://discord.com/invite/EeVuh24q8E">
+            <a>
+              <button id="discord-button">View our upcoming</button>
+            </a>
+          </Link>
         </>
     );
 };
